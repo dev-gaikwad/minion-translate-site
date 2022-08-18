@@ -14,8 +14,7 @@ function constructURL(text){
 
 function clickHandler(){
 
-    var inputText = txtInput.value
-    console.log("fetching URL");
+    var inputText = txtInput.value ;
     fetch(constructURL(inputText))
     .then(response => response.json())
     .then(json => {
@@ -24,5 +23,4 @@ function clickHandler(){
     })
 }
 
-console.log(btnTranslate);
 btnTranslate.addEventListener("click", clickHandler);
